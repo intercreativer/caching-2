@@ -1,0 +1,9 @@
+version : '3'
+services: # Services to deploy
+  
+  api:
+    image: api #image name, Default:- Folder Name
+    build:
+      dockerfile : Dockerfile # path to Dockerfile
+    ports:
+      - "8002:8080" # HOST_PORT:CONTAINER_PORT
