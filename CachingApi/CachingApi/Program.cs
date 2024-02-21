@@ -1,5 +1,6 @@
 using CachingApi;
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IDataRepository, DataRepository>();
 builder.Services.AddScoped<IDataService, DataService>();
+
+builder.Services.AddSingleton(sp => ConnectionMultiplexer.Connect("redis"));
+builder.Services.AddSingleton<RedisGenericCache>();
+builder.Services.Decorate<IDataRepository, RedisDataRepository>();
 
 var app = builder.Build();
 
