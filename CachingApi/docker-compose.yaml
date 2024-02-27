@@ -1,14 +1,19 @@
 version : '3'
 services: # Services to deploy
-  
+  redis:
+    image: myredis  
   api:
-    image: api #image name, Default:- Folder Name
+    image: api
     ports:
       - "4000:8080"
+    depends_on:
+      - redis
   api2:
     image: api
     ports:
       - "4001:8080"
+    depends_on:
+      - redis 
   yarp:
     image: yarp
     ports:

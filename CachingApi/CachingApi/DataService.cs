@@ -1,4 +1,6 @@
-﻿namespace CachingApi;
+﻿using CachingApi.Repository;
+
+namespace CachingApi;
 
 public interface IDataService
 {
