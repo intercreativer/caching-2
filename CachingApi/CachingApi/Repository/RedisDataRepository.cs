@@ -1,6 +1,8 @@
-﻿using StackExchange.Redis;
+﻿using CachingApi.Cache;
+using CachingApi.Properties.Model;
+using StackExchange.Redis;
 
-namespace CachingApi;
+namespace CachingApi.Repository;
 
 public class RedisDataRepository : RedisGenericCache, IDataRepository
 {

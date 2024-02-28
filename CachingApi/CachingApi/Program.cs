@@ -1,4 +1,6 @@
-using CachingApi;
+using CachingApi.Cache;
+using CachingApi.Repository;
+using CachingApi.Service;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
 

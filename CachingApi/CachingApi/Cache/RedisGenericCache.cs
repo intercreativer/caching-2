@@ -1,6 +1,6 @@
 ﻿using StackExchange.Redis;
 
-namespace CachingApi;
+namespace CachingApi.Cache;
 
 public interface IGenericCache
 {

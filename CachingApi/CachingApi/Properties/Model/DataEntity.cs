@@ -1,4 +1,4 @@
-﻿namespace CachingApi;
+﻿namespace CachingApi.Properties.Model;
 
 public class DataEntity
 {
